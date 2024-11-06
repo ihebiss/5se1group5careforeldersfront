@@ -1,0 +1,25 @@
+<div class="templatemo-content-container">
+    <button class="btn btn-success mb-3" (click)="buttonAjouter()">Ajouter Produit</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>nomproduit</th>
+                <th>description</th>
+                <th>prix</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of prduits">
+                <td>{{ item.nomproduit }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.prix }}</td>
+                <td>
+                    <button (click)="buttonModifier(item.idProduit)" class="btn btn-info">Edit</button>
+                    <button (click)="delete(item.idProduit)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

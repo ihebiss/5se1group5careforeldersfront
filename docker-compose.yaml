@@ -1,0 +1,50 @@
+version: "3"
+services:
+  mysqldb:
+    image: mysql:8
+    container_name: db_mysql
+    hostname: db_mysql
+    networks:
+      - netapp
+    ports:
+      - 3306:3306
+  
+    environment:
+      - MYSQL_DATABASE=db
+      - DATABASE_DRIVER=com.mysql.cj.jdbc.Driver
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      
+  springboot:
+    image: iheb1999/bk9:v0
+    container_name: springboot
+    hostname: springboot
+    networks:
+      - netapp
+    ports:
+      - "8087:8087"
+   
+    depends_on:
+      - mysqldb
+     
+
+
+
+  
+  angular:
+    image: iheb1999/ag15:v0
+    container_name: angular_app
+    hostname: angular_app
+    networks:
+       - netapp
+    ports:
+      - "4200:80"
+    depends_on:
+      - springboot
+      
+
+
+   
+
+networks:
+  netapp: 
+   external: true
