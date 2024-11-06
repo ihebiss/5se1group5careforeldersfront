@@ -4,8 +4,7 @@ services:
     image: mysql:8
     container_name: db_mysql
     hostname: db_mysql
-    networks:
-      - netapp
+
     ports:
       - 3306:3306
   
@@ -18,8 +17,7 @@ services:
     image: iheb1999/ihebissaoui-5se1-group5-careforeldres:v0
     container_name: springboot
     hostname: springboot
-    networks:
-      - netapp
+
     ports:
       - "8087:8087"
    
@@ -45,6 +43,3 @@ services:
 
    
 
-networks:
-  netapp: 
-   external: true
