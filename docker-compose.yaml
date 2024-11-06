@@ -15,7 +15,7 @@ services:
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
       
   springboot:
-    image: iheb1999/bk9:v0
+    image: iheb1999/ihebissaoui-5se1-group5-careforeldres:v0
     container_name: springboot
     hostname: springboot
     networks:
@@ -31,7 +31,7 @@ services:
 
   
   angular:
-    image: iheb1999/ag15:v0
+    image: iheb1999/ihebissaoui-5se1-group5-careforeldresfront:v0
     container_name: angular_app
     hostname: angular_app
     networks:
