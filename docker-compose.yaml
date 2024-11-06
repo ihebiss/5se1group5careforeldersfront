@@ -4,6 +4,7 @@ services:
     image: mysql:8
     container_name: db_mysql
     hostname: db_mysql
+    restart: unless-stopped
 
     ports:
       - 3306:3306
@@ -12,11 +13,13 @@ services:
       - MYSQL_DATABASE=db
       - DATABASE_DRIVER=com.mysql.cj.jdbc.Driver
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
-      
+    volumes:
+      - mysql_data:/var/lib/mysql  
   springboot:
     image: iheb1999/ihebissaoui-5se1-group5-careforeldres:v0
     container_name: springboot
     hostname: springboot
+    restart: unless-stopped
 
     ports:
       - "8087:8087"
@@ -32,13 +35,14 @@ services:
     image: iheb1999/ihebissaoui-5se1-group5-careforeldresfront:v0
     container_name: angular_app
     hostname: angular_app
+    restart: unless-stopped
 
     ports:
       - "4200:80"
     depends_on:
       - springboot
       
-
-
+volumes:
+  mysql_data:
    
 
