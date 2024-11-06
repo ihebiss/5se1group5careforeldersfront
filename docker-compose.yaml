@@ -32,8 +32,7 @@ services:
     image: iheb1999/ihebissaoui-5se1-group5-careforeldresfront:v0
     container_name: angular_app
     hostname: angular_app
-    networks:
-       - netapp
+
     ports:
       - "4200:80"
     depends_on:
