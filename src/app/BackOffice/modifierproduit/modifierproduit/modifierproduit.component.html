@@ -1,0 +1,21 @@
+<form>
+    <div class="form-group">
+      <label for="nomproduit">nomproduit</label>
+      <input type="text" class="form-control"   [(ngModel)]="produit.nomproduit" [ngModelOptions]="{standalone: true}" placeholder="nomproduit">
+    </div>
+    <div class="form-group">
+      <label for="numFixe">Description</label>
+      <input type="text" class="form-control" [(ngModel)]="produit.description" [ngModelOptions]="{standalone: true}"  placeholder="description">
+    </div>
+    
+      <div class="form-group">
+        <label for="prix">prix</label>
+        <input type="number" class="form-control"  [(ngModel)]="produit.prix" [ngModelOptions]="{standalone: true}" placeholder="prix">
+      </div>
+
+    
+    <div class="col-3">
+      <button (click)="modifierProduit()" class="btn btn-primary form-control m-1 text-light">Update</button>
+  </div>
+  
+  </form>
