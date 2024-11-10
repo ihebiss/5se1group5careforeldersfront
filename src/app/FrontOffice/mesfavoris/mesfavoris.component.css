@@ -1,0 +1,54 @@
+.favoris-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .empty-favoris {
+    text-align: center;
+    color: #941a1a;
+  }
+  
+  .favoris-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  .favoris-details {
+    margin-bottom: 15px;
+  }
+  
+  .favoris-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .favoris-description {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .favoris-price {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .favoris-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .favoris-button:hover {
+    background-color: #c82333;
+  }
+  .label {
+    font-weight: bold;
+    color: #0081f3; /* Couleur bleue */
+  }

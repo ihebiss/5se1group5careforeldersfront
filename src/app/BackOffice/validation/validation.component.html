@@ -1,0 +1,34 @@
+<div *ngIf="commandesEnAttente.length > 0">
+    <h2>Commandes en attente</h2>
+    <table class="commandes-table">
+        <thead>
+            <tr>
+               
+                <th>Montant total</th>
+                <th>Date de commande</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let commande of commandesEnAttente; let i = index">
+                <tr [ngClass]="{'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0}">
+                    
+                    <td>{{ commande.montantTotal }}</td>
+                    <td>{{ commande.date_commande }}</td>
+                    <td>
+                        <button class="valider-button" (click)="validerCommande(commande?.idCommande)">Valider commande</button>
+                    </td>
+                </tr>
+                <tr class="separator-row">
+                    <td colspan="3"></td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+    <div *ngIf="displayValidationMessage" class="validation-message">
+        <p>{{ validationMessage }}</p>
+    </div>
+</div>
+<div *ngIf="commandesEnAttente.length === 0">
+    <p>Aucune commande en attente.</p>
+</div>
