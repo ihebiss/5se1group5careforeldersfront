@@ -12,9 +12,9 @@ import { Observable, map } from 'rxjs';
 })
 export class AuthenticationService {
 
-  private baseUrl = 'http://192.168.233.128:8087/api/v1/auth'
-private baseUrl1 = 'http://192.168.233.128:8087/api/v1/demo-controller'
-private baseUrl2 = 'http://192.168.233.128:8087/map';
+  private baseUrl = 'http://192.168.13.132:8087/api/v1/auth'
+private baseUrl1 = 'http://192.168.13.132:8087/api/v1/demo-controller'
+private baseUrl2 = 'http://192.168.13.132:8087/map';
   requestHeader = new HttpHeaders(
 {
   "No-Auth":"True"
