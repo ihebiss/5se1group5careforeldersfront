@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class DonateurService {
 
   constructor(private http : HttpClient) { }
-  private url ='http://127.0.0.1:8087/' ;
+  private url ='http://192.168.177.128:8087/' ;
 
 
   ajouterAideDonateur(donateur: any, aide: any, idShelter: any) {
