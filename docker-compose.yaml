@@ -16,7 +16,7 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql  
   springboot:
-    image: iheb1999/ihebissaoui-5se1-group5-careforeldres:v0
+    image: yassinemchairia/5se1group5backend:latest
     container_name: springboot
     hostname: springboot
     restart: unless-stopped
@@ -32,7 +32,7 @@ services:
 
   
   angular:
-    image: iheb1999/ihebissaoui-5se1-group5-careforeldresfront:v0
+    image: yassinemchairia/5se1group5front:latest
     container_name: angular_app
     hostname: angular_app
     restart: unless-stopped
