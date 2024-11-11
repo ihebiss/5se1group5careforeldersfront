@@ -8,7 +8,7 @@ import { Observable, catchError, map, throwError } from 'rxjs';
 export class ShelterService {
 
   constructor(private http : HttpClient) { }
-  private url ='http://192.168.56.129:8087/' ;
+  private url ='http://192.168.177.128:8087/' ;
 
 
 
@@ -28,7 +28,7 @@ export class ShelterService {
   }
   affectHomelessToShelter(idHomeless: number, idShelter: number) {
     const body = {}; // Define your request body if needed, currently empty
-    return this.http.put('http://127.0.0.1:8087/Homeless/affect/' + idHomeless + "/" + idShelter, body);
+    return this.http.put('http://192.168.177.128:8087/Homeless/affect/' + idHomeless + "/" + idShelter, body);
 }
   getShelterById(id:number){
     return this.http.get(this.url + 'shelter/Shelter/' + id);
@@ -58,7 +58,7 @@ export class ShelterService {
     
   }
   addCauseToShelter(shelterId: number, causeData: any): Observable<any> {
-    return this.http.post(`http://127.0.0.1:8087/shelter/addCauseToShelter/${shelterId}`, causeData, { responseType: 'text' })
+    return this.http.post(`http://192.168.177.128:8087/shelter/addCauseToShelter/${shelterId}`, causeData, { responseType: 'text' })
       .pipe(
         catchError((error: HttpErrorResponse) => {
           let errorMessage = 'Une erreur s\'est produite lors de l\'ajout de la cause.';
