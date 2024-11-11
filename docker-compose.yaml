@@ -32,7 +32,7 @@ services:
 
   
   angular:
-    image: yassinemchairia/5se1group5front:latest
+    image: yassinemchairia/5se1group5frontend:latest
     container_name: angular_app
     hostname: angular_app
     restart: unless-stopped
