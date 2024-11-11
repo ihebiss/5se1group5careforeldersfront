@@ -8,23 +8,23 @@ import { Observable, catchError, map, throwError } from 'rxjs';
 export class ShelterService {
 
   constructor(private http : HttpClient) { }
-  private url ='http://192.168.177.128/shelter' ;
+  private url ='http://192.168.56.129:8087/' ;
 
 
 
   createNewShelter(shelter: any){
-    return this.http.post(this.url + '/addShelter' , shelter);
+    return this.http.post(this.url + 'shelter/addShelter' , shelter);
   }
 
   getAllShelters(){
-    return this.http.get(this.url +'/allShelter');
+    return this.http.get(this.url +'shelter/allShelter');
   }
   getAllAchievements(){
-    return this.http.get(this.url +'/allAchievment');
+    return this.http.get(this.url +'shelter/allAchievment');
   }
   
   deleteShelter(id:number){
-    return this.http.delete(this.url +'/RemoveShelter/' + id);
+    return this.http.delete(this.url +'shelter/RemoveShelter/' + id);
   }
   affectHomelessToShelter(idHomeless: number, idShelter: number) {
     const body = {}; // Define your request body if needed, currently empty
