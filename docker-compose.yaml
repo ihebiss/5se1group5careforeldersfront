@@ -16,7 +16,7 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql  
   springboot:
-    image: medamine2007/meedaamiiineebrahhmiii-5se1-group5-careforeldres:latest
+    image: medamine2007/mmeedaamiiineebrahhmiii-5se1-group5-careforeldres:latest
     container_name: springboot
     hostname: springboot
     restart: unless-stopped
