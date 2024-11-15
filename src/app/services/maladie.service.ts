@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MaladieService {
 
-  url : string = 'http://localhost:8087/maladie/';
+  url : string = 'http://192.168.56.129:8087/maladie/';
 
   constructor(private http: HttpClient) { }
 
