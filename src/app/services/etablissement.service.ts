@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class EtablissementService {
 
-  url : string = 'http://localhost:8087/etab/';
-  private baseUrl = 'http://localhost:8080/map';
+  url : string = 'http://192.168.56.129:8087/etab/';
+  private baseUrl = 'http://192.168.56.129:8080/map';
 
   constructor(private http: HttpClient) { }
 
