@@ -7,7 +7,7 @@ import { Observable, catchError, map, throwError } from 'rxjs';
 })
 export class CoungeService {
 
-  url : string = 'http://localhost:8087/counge/';
+  url : string = 'http://192.168.56.129:8087/counge/';
   private httpOptions = {
     headers: new HttpHeaders({
       'Accept': 'text/html, application/xhtml+xml, */*',
