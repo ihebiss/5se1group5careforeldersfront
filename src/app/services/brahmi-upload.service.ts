@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class BrahmiUploadService {
 
-  private uploadUrl = 'http://localhost:8087/cloud/upload';
+  private uploadUrl = 'http://192.168.56.129:8087/cloud/upload';
 
   constructor(private http: HttpClient) { }
 
