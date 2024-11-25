@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class PlatService {
 
 
-  url : string = 'http://localhost:8087/plat/';
+  url : string = 'http://192.168.56.129:8087/plat/';
 
   constructor(private http: HttpClient) { }
 
