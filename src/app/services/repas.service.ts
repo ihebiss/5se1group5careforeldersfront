@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class RepasService {
 
-  url: string = 'http://localhost:8087/repas/';
+  url: string = 'http://192.168.56.129:8087/repas/';
 
   constructor(private http: HttpClient) { }
 
