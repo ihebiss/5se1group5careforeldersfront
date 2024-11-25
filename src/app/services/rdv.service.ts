@@ -6,9 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RdvService {
-  url : string = 'http://localhost:8087/rdv/';
-  url2 : string = 'http://localhost:8087/patient/';
-  private baseUrl = 'http://localhost:8087'; 
+  url : string = 'http://192.168.56.129:8087/rdv/';
+  url2 : string = 'http://192.168.56.129:8087/patient/';
+  private baseUrl = 'http://192.168.56.129:8087'; 
 
   constructor(private http: HttpClient) { }
   ajouterRdv(rdv:any):Observable<any>{
